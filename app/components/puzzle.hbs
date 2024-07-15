@@ -1,0 +1,15 @@
+<div>
+    <div>{{this.currentState.[0]}} | {{this.currentState.[1]}} | {{this.currentState.[2]}}</div>
+    <div>{{this.currentState.[3]}} | {{this.currentState.[4]}} | {{this.currentState.[5]}}</div>
+    <div>{{this.currentState.[6]}} | {{this.currentState.[7]}} | {{this.currentState.[8]}}</div>
+
+</div>
+
+<div>
+    <input type="number" {{on "input" this.updatePieceEntry}} value={{this.pieceToMove}} placeholder="1-8" />
+    <button {{on "click" this.movePiece}}> Move Piece</button>
+</div>
+
+{{#if this.message}}
+    <p>{{this.message}}</p>
+{{/if}}
